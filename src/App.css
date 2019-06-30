@@ -60,7 +60,79 @@
 
 }
 
+.album-dropdown-base img  , ul.album-menu img{
+  height: 45px;
+  width: 45px;
 
+}
+
+.album-dropdown-base, ul.album-dropdown-base li{
+  display: flex;
+  align-items: center;
+  justify-content :space-between;
+  cursor: pointer;
+  padding: 30px 25px 10px 10px;
+
+}
+
+ul.album-menu li span, .album-dropdown-base span:not(.dropdown-arrow){
+  display : inline-block;
+  width :180px;
+  text-overflow: ellipsis;
+  white-space: space nowrap;
+  overflow: hidden;
+}
+
+
+ul.album-menu li:hover{
+  background-color: #eee;
+
+}
+
+ul.album-menu li span :nth-child(2), .album-dropdown-base span:nth-child(2){
+  width: 38px;
+  padding: 0 3px 0 9px;
+}
+
+.swanky-input-container .react-datepicker-popper{
+  z-index: 40;
+}
+
+.swanky-input-container .react-datepicker{
+  transform:scale(1.25, 1.25);
+}
+
+.swanky-input-container .react-datepicker__input-container{
+  position: static;
+}
+
+.album-dropdown-base img{
+  height: 45px;
+  width: 45px;
+}
+
+.album-dropdown-base .dropdown-arrow{
+  position: absolute;
+  right: 5px;
+  user-select: none;
+}
+
+ul.album-menu{
+  list-style: none;
+  padding: 0;
+
+  position : absolute;
+  top:100%;
+
+  max-height: 25vh;
+  overflow-y: auto;
+
+  margin: 2px 0 0 0;
+
+
+  z-index: 30;
+  background-color: white;
+}
 
 
 .done-container {
@@ -78,10 +150,73 @@
   user-select: none;
 }
 
+.done-button:hoover{
+  background-color: #eee;
+}
+
+.modal-open{
+  position:fixed;
+  top:20vh;
+  left: 20vw;
+  width: 60vw;
+  height: 40vh;
+
+  background-color: #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  z-index: 1000;
 
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
+.modal-open .x-button{
+
+  fill:white;
+  stroke: black;
+  stroke-width: 3px;
+
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+
+.modal-open .x-button circle, .modal-open path{
+  cursor : pointer;
+}
+
+
+.modal-open .x-button:hover path{
+  stroke:red;
+
+
+}
+
+
+.modal-closed{
+  display: none;
+}
+
+
+.modal-shade{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  top:0;
+  left: 0;
+
+  z-index: 420;
+  background: #3338;
+}
 
 
 
@@ -117,4 +252,23 @@
 
   display: none;
 
+}
+
+.goldRecords{
+  position: absolute;
+  right: 50px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.goldRecord{
+  width: 20px;
+}
+
+.goldRecord img{
+  height: 50px;
+  width: 50px
 }
